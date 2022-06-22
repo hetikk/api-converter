@@ -1,15 +1,15 @@
 package com.github.hetikk.apiconv.common.model.endpoint;
 
-public class Endpoint extends ApiSchemaItem {
+public class EndpointGroup extends ApiSchemaItem {
 
     @Override
     boolean isEndpoint() {
-        return true;
+        return false;
     }
 
     @Override
     boolean isGroup() {
-        return false;
+        return true;
     }
 
 }

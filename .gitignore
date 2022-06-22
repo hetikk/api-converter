@@ -33,3 +33,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/converter/src/main/java/com/github/hetikk/apiconv/converter/test/
