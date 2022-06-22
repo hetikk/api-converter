@@ -1,6 +1,23 @@
 package com.github.hetikk.apiconv.common.model.endpoint;
 
-public class Endpoint extends ApiSchemaItem {
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
+import java.util.List;
+
+@Getter
+@Setter
+@EqualsAndHashCode(callSuper = true)
+public class Endpoint extends ApiSchemaItem implements Comparable<Endpoint>, Serializable {
+
+    private String endpoint;
+    private Method method;
+    private String summary;
+    private String description;
+    private List<PathParam> pathParams;
+    private List<QueryParam> queryParams;
 
     @Override
     boolean isEndpoint() {
@@ -12,4 +29,20 @@ public class Endpoint extends ApiSchemaItem {
         return false;
     }
 
+    @Override
+    public int compareTo(Endpoint o) {
+        int compare = this.endpoint.compareTo(o.endpoint);
+        if (compare == 0) {
+            compare = Integer.compare(this.method.getOrder(), o.method.getOrder());
+        }
+        return compare;
+    }
+
+    @Override
+    public String toString() {
+        return "Endpoint{" +
+                "endpoint='" + endpoint + '\'' +
+                ", method=" + method +
+                '}';
+    }
 }
