@@ -1,0 +1,471 @@
+{
+	"info": {
+		"_postman_id": "2053d1a9-5044-4910-98f8-704555924682",
+		"name": "Test collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Params",
+			"item": [
+				{
+					"name": "Query params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://test.localhost:8080?1=1",
+							"protocol": "http",
+							"host": [
+								"test",
+								"localhost"
+							],
+							"port": "8080",
+							"query": [
+								{
+									"key": "1",
+									"value": "1",
+									"description": "1"
+								},
+								{
+									"key": "2",
+									"value": "2",
+									"description": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Path params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://test.localhost/:id/:field",
+							"protocol": "http",
+							"host": [
+								"test",
+								"localhost"
+							],
+							"path": [
+								":id",
+								":field"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "field",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Methods",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://test.localhost:8080",
+							"protocol": "http",
+							"host": [
+								"test",
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://test.localhost:8080",
+							"protocol": "http",
+							"host": [
+								"test",
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://test.localhost:8080",
+							"protocol": "http",
+							"host": [
+								"test",
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://test.localhost:8080",
+							"protocol": "http",
+							"host": [
+								"test",
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://test.localhost:8080",
+							"protocol": "http",
+							"host": [
+								"test",
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Body",
+			"item": [
+				{
+					"name": "None",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Form data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "1",
+									"value": "1",
+									"contentType": "text/plain",
+									"description": "with content"
+								},
+								{
+									"key": "2",
+									"value": "",
+									"description": "disabled",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "3",
+									"contentType": "",
+									"description": "one file",
+									"type": "file",
+									"src": "/home/hetikk/Test collection.postman_collection.json"
+								},
+								{
+									"key": "4",
+									"description": "more files",
+									"type": "file",
+									"src": [
+										"/home/hetikk/Test collection.postman_collection.json",
+										"/home/hetikk/Test collection.postman_collection (copy).json"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Url encoded",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "1",
+									"value": "1",
+									"description": "1",
+									"type": "text"
+								},
+								{
+									"key": "2",
+									"value": "2",
+									"description": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Raw (text)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "plain text"
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Raw (Java Script)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "var x = 1;",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Raw (JSON)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"JSON\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Raw (HTML)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<!DOCTYPE html>\n<html>\n    \n</html>",
+							"options": {
+								"raw": {
+									"language": "html"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Raw (XML)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<tests>\n    <test></test>\n</tests>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Binary",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/home/hetikk/Test collection.postman_collection.json"
+							},
+							"options": {
+								"raw": {
+									"language": "html"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GraphQL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation test($id: ID){\n    test(id: $id){\n        id\n    }\n}\n",
+								"variables": "{\n    \"id\": 123\n}"
+							},
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
