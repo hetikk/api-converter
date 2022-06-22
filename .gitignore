@@ -33,4 +33,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### API Converter testing data ###
 /converter/src/main/java/com/github/hetikk/apiconv/converter/test/
+/test-data/
